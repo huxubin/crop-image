@@ -1,17 +1,21 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <crop-image :img-url="imgUrl"></crop-image>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
+import CropImage from './components/CropImage.vue'
+import Img from './assets/ci.jpeg'
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    CropImage
+  },
+  data () {
+    return {
+      imgUrl: Img
+    }
   }
 }
 </script>
